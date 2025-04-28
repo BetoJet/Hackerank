@@ -1,4 +1,4 @@
-# 🚀 HackerRank Practice Solutions
+## 🚀 HackerRank Practice Solutions
 
 Welcome to my **HackerRank Practice Repo**!  
 Here I'm sharing my journey of solving coding challenges to sharpen my problem-solving skills, learn new techniques, and prepare for technical interviews.
