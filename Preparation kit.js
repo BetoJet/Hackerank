@@ -1,3 +1,5 @@
+//------------------------------------------------------------------------
+
 // Sales by match
 // Problem: Sales by Match
 // Description: 
@@ -33,8 +35,7 @@ function sockMerchant(n, ar) {
     return(pares)
 }
 
-
-
+//------------------------------------------------------------------------
 
 // Problem: Counting Valleys
 // Description: 
@@ -69,7 +70,7 @@ function countingValleys(steps, path) {
     return (valley)
 }
 
-
+//------------------------------------------------------------------------
 
 // Problem: Jumping on the Clouds
 // Description: 
@@ -105,4 +106,51 @@ while (i < c.length-1) {
 }
 
 return count;
+}
+
+//------------------------------------------------------------------------
+
+// Problem: Repeated String
+// Description:
+// You are given a string `s` and a number `n`. The string is repeated infinitely, and 
+// you need to determine how many times the letter 'a' appears in the first `n` characters 
+// of the infinite string formed by repeating `s`.
+//
+// Sample Input:
+// s = "aba"
+// n = 10
+//
+// Sample Output:
+// 7
+//
+// Explanation:
+// The infinite string formed by repeating "aba" is:
+// "abaabaabaabaabaaba..." (repeated infinitely)
+//
+// In the first 10 characters, the letter 'a' appears 7 times.
+// The path is: "abaabaabaa" where 'a' appears 7 times.
+
+
+function repeatedString(s, n) {
+    // Write your code here
+    let strLength = s.length;
+    
+    let count = 0;
+    for(let i =0; i<strLength; i++){
+        if (s[i]=='a'){
+            count++;
+        }
+    }
+    
+    let repeatedStr =Math.floor(n /strLength) 
+    
+    let strLeftLength = n % strLength
+    
+    let extra = 0;
+    for (let i = 0; i< strLeftLength; i++){
+        if (s[i]== 'a'){
+            extra++;
+        }
+    }
+    return((repeatedStr * count)+extra)
 }
